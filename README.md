@@ -1,3 +1,3 @@
 # cheat sheets
 
-My personal learning notes mainly on syntax.
+Just my personal learning notes, mainly on syntax.
