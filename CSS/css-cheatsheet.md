@@ -6,7 +6,7 @@ changing `font-size` as screen size changes
 
 ## using min() max()
 
-```
+```css
 html {
   font-size: min(max(1rem, 4vw), 22px);
 }
@@ -14,7 +14,7 @@ html {
 
 ## using clamp()
 
-```
+```css
 body {
   font-size: clamp(100%, 1rem + 2vw, 24px);
 }
@@ -22,7 +22,7 @@ body {
 
 ## using media queries and calc()
 
-```
+```css
 html {
   font-size: 16px;
 }
