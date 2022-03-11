@@ -26,7 +26,7 @@ npm install gatsby-source-filesystem gatsby-transformer-remark
 
 After installing, add them to `plugins` array in `gatsby-config.js`
 
-## provide site-wide metadata
+# provide site-wide metadata
 
 such as `siteUrl`, `title`, `description`... whatever small piece of data we want to acces site wide.
 
@@ -43,4 +43,42 @@ module.exports = {
     ...
   ],
 }
+```
+
+# pageContext
+
+Get's passed from `gatsby-node.js`.
+
+# creating pages programatically
+
+# navigate to pages programmatically
+
+for example, after a form submission. Use the `navigate` helper function.
+
+```js
+import { navigate } from 'gatsby'
+
+export default function Page() => {
+  const navigateTo = () => {
+    navigate('/some-page')
+  }
+  return (
+    <div>
+      <button onClick={() => navigateTo()}>Go to some page</button>
+    </div>
+  )
+}
+```
+
+```js
+const Form = () => (
+  <form
+    onSubmit={(evt) => {
+      evt.preventDefault();
+      navigate("/thank-you");
+    }}
+  >
+    // form inputs go here
+  </form>
+);
 ```
